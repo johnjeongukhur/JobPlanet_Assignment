@@ -23,33 +23,97 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CB16FE4C-7F60-41A6-BD39-8BF9DC5A724D"
+            uuid = "28876BF9-E793-4F80-826E-A1D1EE9E0BA4"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "JobPlanet_Assignment/View/MainVC.swift"
+            filePath = "JobPlanet_Assignment/View/RecruitChildVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "collectionView(_:numberOfItemsInSection:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "28876BF9-E793-4F80-826E-A1D1EE9E0BA4 - 657087456b617b2e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JobPlanet_Assignment.RecruitChildVC.collectionView(_: __C.UICollectionView, numberOfItemsInSection: Swift.Int) -&gt; Swift.Int"
+                  moduleName = "JobPlanet_Assignment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/johnhur/Documents/Swift-Colab/JobPlanet_Assignment/JobPlanet_Assignment/View/RecruitChildVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "684">
+               </Location>
+               <Location
+                  uuid = "28876BF9-E793-4F80-826E-A1D1EE9E0BA4 - 657087456b617b2e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JobPlanet_Assignment.RecruitChildVC.collectionView(_: __C.UICollectionView, numberOfItemsInSection: Swift.Int) -&gt; Swift.Int"
+                  moduleName = "JobPlanet_Assignment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/johnhur/Documents/Swift-Colab/JobPlanet_Assignment/JobPlanet_Assignment/View/RecruitChildVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "368">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F33EBCD8-109C-4666-8460-CBDE596CBF74"
-            shouldBeEnabled = "No"
+            uuid = "4FB7B61D-3708-4564-99FF-65E162446F98"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JobPlanet_Assignment/View/MainVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "167"
-            endingLineNumber = "167"
-            landmarkName = "collectionView(_:layout:sizeForItemAt:)"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "didReceiveData(data:isScroll:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4FB7B61D-3708-4564-99FF-65E162446F98 - 574d3b68869bd4f2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JobPlanet_Assignment.MainVC.didReceiveData(data: Swift.Double, isScroll: Swift.Bool) -&gt; ()"
+                  moduleName = "JobPlanet_Assignment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/johnhur/Documents/Swift-Colab/JobPlanet_Assignment/JobPlanet_Assignment/View/MainVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "668">
+               </Location>
+               <Location
+                  uuid = "4FB7B61D-3708-4564-99FF-65E162446F98 - 574d3b68869bd491"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JobPlanet_Assignment.MainVC.didReceiveData(data: Swift.Double, isScroll: Swift.Bool) -&gt; ()"
+                  moduleName = "JobPlanet_Assignment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/johnhur/Documents/Swift-Colab/JobPlanet_Assignment/JobPlanet_Assignment/View/MainVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "668">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
