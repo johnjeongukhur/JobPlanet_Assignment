@@ -146,8 +146,7 @@ extension MainVC: UICollectionViewDelegateFlowLayout {
             let cellHeight: CGFloat = cellWidth * 1.4
             return CGSize(width: cellWidth, height: cellHeight)
         } else {
-            // 다른 UICollectionView에서는 기본 크기를 반환합니다.
-            return CGSize(width: 50, height: 50) // 적절한 기본 크기를 설정하세요.
+            return CGSize(width: 50, height: 50)
         }
     }
     
@@ -178,7 +177,6 @@ extension MainVC: UIScrollViewDelegate {
                     self.menuCollectionView.layer.opacity = 1.0
                 }
 
-                // 뷰 레이아웃을 업데이트하여 애니메이션을 적용합니다.
                 self.view.layoutIfNeeded()
             }
         }
