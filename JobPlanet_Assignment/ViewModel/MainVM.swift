@@ -14,12 +14,6 @@ class MainVM {
     
     let disposeBag = DisposeBag()
     
-    init() {
-        getRecruitList {
-            print("호출됨")
-        }
-    }
-    
     var recruitList = BehaviorRelay<RecruitListModel?>(value: nil)
 
     func getRecruitList(action: @escaping () -> Void) {

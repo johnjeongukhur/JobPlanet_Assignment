@@ -8,6 +8,7 @@
 import UIKit
 
 let menuCollectionViewHeight = 62.0
+var searchTopInset = 0.0 // 상단의 Search 바 크기
 
 enum Menu: Int {
     case recruit
@@ -19,10 +20,9 @@ enum Menu: Int {
         case .company: return "기업"
         }
     }
-    
 }
 
-class MainVC: UIViewController {
+class MainVC: UIViewController, RecruitChildDelegate {
 
     let viewModel = MainVM()
     
@@ -35,30 +35,61 @@ class MainVC: UIViewController {
     let menuItems: [Menu] = [.recruit, .company]
     var selectedMenu = Menu.recruit
     
-    
-    @IBOutlet weak var jobCollectionView: UICollectionView!
+    @IBOutlet weak var recuitView: UIView!
+    @IBOutlet weak var companyView: UIView!
     
     /*
      searchSuperView - menuCollectionView의 상단에 위치하는 뷰 menuCollectionView 감춤
-     jobCollectionViewTop - 스크롤 올릴때 jobCollectionViewTop 영역 올림
+     recruitViewTopInset - 스크롤 올릴때 jobCollectionViewTop 영역 올림
      */
     @IBOutlet weak var searchSuperView: UIView!
-    @IBOutlet weak var jobCollectionViewTop: NSLayoutConstraint!
+    @IBOutlet weak var recruitViewTopInset: NSLayoutConstraint!
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toRecruitChild" {
+            DispatchQueue.main.async {
+                let recruitVC = segue.destination as! RecruitChildVC
+                recruitVC.height = self.searchSuperView.frame.height
+                recruitVC.delegate = self
+            }
+        } else if segue.identifier == "toCompanyChild" {
+            let recruitVC = segue.destination as! CompanyChildVC
+            
+        }
+    }
+    
+    func didReceiveData(data: Double, isScroll: Bool) {
+        print("Received data from RecruitChildVC: \(data)")
+        UIView.animate(withDuration: 0.3) {
+            self.menuCollectionView.frame.origin.y = data
+            if isScroll {
+                self.recruitViewTopInset.constant = -62
+            } else {
+                self.recruitViewTopInset.constant = 0
+                
+            }
+            self.view.layoutIfNeeded()
+
+        }
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.getRecruitList {
-            self.jobCollectionView.reloadData()
-        }
+        searchTopInset = searchSuperView.frame.height
         
         setupUI()
+        
+        searchSuperView.layer.zPosition = 0
+        menuCollectionView.layer.zPosition = -1
     }
     
     func setupUI() {
         setupSearchBar()
         setupMenuView()
-        setupJobView()
+        
+        companyView.isHidden = true
     }
     
     func setupSearchBar() {
@@ -94,14 +125,6 @@ class MainVC: UIViewController {
         let indexPath = IndexPath(item: 0, section: 0)
         menuCollectionView.selectItem(at: indexPath, animated: true, scrollPosition: .bottom)
     }
-
-    func setupJobView() {
-        jobCollectionView.register(JobViewCell.self, forCellWithReuseIdentifier: "JobViewCell")
-        jobCollectionView.dataSource = self
-        jobCollectionView.delegate = self
-    }
-    
-
 }
 
 extension MainVC: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -109,8 +132,6 @@ extension MainVC: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == menuCollectionView {
             return menuItems.count
-        } else if collectionView == jobCollectionView {
-            return viewModel.recruitList.value?.recruitItems?.count ?? 0
         }
         return 0
     }
@@ -119,14 +140,6 @@ extension MainVC: UICollectionViewDataSource, UICollectionViewDelegate {
         if collectionView == menuCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MenuCell", for: indexPath) as! MenuViewCell
             cell.configure(with: menuItems[indexPath.item].text, index: indexPath.row)
-            
-            return cell
-        } else if collectionView == jobCollectionView {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "JobCell", for: indexPath) as! JobViewCell
-            
-            if let item = viewModel.recruitList.value?.recruitItems?[indexPath.row] {
-                cell.configure(item)
-            }
             
             return cell
         }
@@ -138,9 +151,14 @@ extension MainVC: UICollectionViewDataSource, UICollectionViewDelegate {
             let selectedCell = collectionView.cellForItem(at: indexPath) as? MenuViewCell
             
             selectedMenu = Menu(rawValue: indexPath.item) ?? .recruit
-
-        } else if collectionView == jobCollectionView {
-            let selectedOption = indexPath.item
+            
+            if indexPath.item == 0 {
+                recuitView.isHidden = false
+                companyView.isHidden = true
+            } else {
+                recuitView.isHidden = true
+                companyView.isHidden = false
+            }
         }
     }
 }
@@ -162,46 +180,9 @@ extension MainVC: UICollectionViewDelegateFlowLayout {
 
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if collectionView == jobCollectionView {
-            let screenWidth = UIScreen.main.bounds.size.width
-            let cellWidth = (screenWidth - 55) / 2
-            let cellHeight: CGFloat = cellWidth * 1.4
-            return CGSize(width: cellWidth, height: cellHeight)
-        } else {
-            return CGSize(width: 50, height: 50)
-        }
+        return CGSize(width: 50, height: 50)
     }
     
     
 }
 
-extension MainVC: UIScrollViewDelegate {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView == jobCollectionView {
-            let yOffset = scrollView.contentOffset.y
-            let topInset = searchBar.frame.height + searchBarBottomLine.frame.height + view.safeAreaInsets.top
-
-
-            UIView.animate(withDuration: 0.3) {
-                if yOffset > topInset {
-                    // 스크롤 내렸을 떄
-                    self.menuCollectionView.frame.origin.y = 0
-                    self.menuCollectionView.layer.opacity = 0.0
-                    self.jobCollectionViewTop.constant = -menuCollectionViewHeight
-                    
-                    self.view.sendSubviewToBack(self.menuCollectionView)
-                    self.searchSuperView.sendSubviewToBack(self.menuCollectionView)
-                    
-                } else {
-                    // 상단에 도착했을 때
-                    self.jobCollectionViewTop.constant = 0
-                    self.menuCollectionView.frame.origin.y = topInset
-                    self.menuCollectionView.layer.opacity = 1.0
-                }
-
-                self.view.layoutIfNeeded()
-            }
-        }
-
-    }
-}
