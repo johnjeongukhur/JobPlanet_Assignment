@@ -23,54 +23,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "561C246E-B7A6-4476-A770-E21B78349A2B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "JobPlanet_Assignment/View/MainVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
-            landmarkName = "collectionView(_:didSelectItemAt:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "561C246E-B7A6-4476-A770-E21B78349A2B - 9b593be40b63ab48"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "JobPlanet_Assignment.MainVC.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
-                  moduleName = "JobPlanet_Assignment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/johnhur/Documents/Swift-Colab/JobPlanet_Assignment/JobPlanet_Assignment/View/MainVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "112"
-                  endingLineNumber = "112"
-                  offsetFromSymbolStart = "488">
-               </Location>
-               <Location
-                  uuid = "561C246E-B7A6-4476-A770-E21B78349A2B - 9b593be40b63ab29"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "JobPlanet_Assignment.MainVC.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
-                  moduleName = "JobPlanet_Assignment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/johnhur/Documents/Swift-Colab/JobPlanet_Assignment/JobPlanet_Assignment/View/MainVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "113"
-                  endingLineNumber = "113"
-                  offsetFromSymbolStart = "488">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "CB16FE4C-7F60-41A6-BD39-8BF9DC5A724D"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -78,8 +30,8 @@
             filePath = "JobPlanet_Assignment/View/MainVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
             landmarkName = "collectionView(_:numberOfItemsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -88,63 +40,16 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "F33EBCD8-109C-4666-8460-CBDE596CBF74"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JobPlanet_Assignment/View/MainVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
             landmarkName = "collectionView(_:layout:sizeForItemAt:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "F33EBCD8-109C-4666-8460-CBDE596CBF74 - 7a5bb233ea70acc5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "JobPlanet_Assignment.MainVC.collectionView(_: __C.UICollectionView, layout: __C.UICollectionViewLayout, sizeForItemAt: Foundation.IndexPath) -&gt; __C.CGSize"
-                  moduleName = "JobPlanet_Assignment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/johnhur/Documents/Swift-Colab/JobPlanet_Assignment/JobPlanet_Assignment/View/MainVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "147"
-                  endingLineNumber = "147"
-                  offsetFromSymbolStart = "536">
-               </Location>
-               <Location
-                  uuid = "F33EBCD8-109C-4666-8460-CBDE596CBF74 - 7a5bb233ea70af07"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "JobPlanet_Assignment.MainVC.collectionView(_: __C.UICollectionView, layout: __C.UICollectionViewLayout, sizeForItemAt: Foundation.IndexPath) -&gt; __C.CGSize"
-                  moduleName = "JobPlanet_Assignment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/johnhur/Documents/Swift-Colab/JobPlanet_Assignment/JobPlanet_Assignment/View/MainVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "145"
-                  endingLineNumber = "145"
-                  offsetFromSymbolStart = "480">
-               </Location>
-               <Location
-                  uuid = "F33EBCD8-109C-4666-8460-CBDE596CBF74 - 7a5bb233ea70afdd"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "JobPlanet_Assignment.MainVC.collectionView(_: __C.UICollectionView, layout: __C.UICollectionViewLayout, sizeForItemAt: Foundation.IndexPath) -&gt; __C.CGSize"
-                  moduleName = "JobPlanet_Assignment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/johnhur/Documents/Swift-Colab/JobPlanet_Assignment/JobPlanet_Assignment/View/MainVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "139"
-                  endingLineNumber = "139"
-                  offsetFromSymbolStart = "480">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
