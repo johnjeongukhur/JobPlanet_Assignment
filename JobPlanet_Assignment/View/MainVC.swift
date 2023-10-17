@@ -9,6 +9,19 @@ import UIKit
 
 let menuCollectionViewHeight = 62.0
 
+enum Menu: Int {
+    case recruit
+    case company
+    
+    var text: String {
+        switch self {
+        case .recruit: return "채용"
+        case .company: return "기업"
+        }
+    }
+    
+}
+
 class MainVC: UIViewController {
 
     let viewModel = MainVM()
@@ -18,7 +31,10 @@ class MainVC: UIViewController {
     @IBOutlet weak var searchBarBottomLine: UIView!
     
     @IBOutlet weak var menuCollectionView: UICollectionView!
-    let menuItems = ["채용", "기업"]
+    
+    let menuItems: [Menu] = [.recruit, .company]
+    var selectedMenu = Menu.recruit
+    
     
     @IBOutlet weak var jobCollectionView: UICollectionView!
     
@@ -73,6 +89,10 @@ class MainVC: UIViewController {
         menuCollectionView.register(MenuViewCell.self, forCellWithReuseIdentifier: "MenuViewCell")
         menuCollectionView.dataSource = self
         menuCollectionView.delegate = self
+        
+        // 첫번째 메뉴 "채용" Default
+        let indexPath = IndexPath(item: 0, section: 0)
+        menuCollectionView.selectItem(at: indexPath, animated: true, scrollPosition: .bottom)
     }
 
     func setupJobView() {
@@ -98,7 +118,8 @@ extension MainVC: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == menuCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MenuCell", for: indexPath) as! MenuViewCell
-            cell.configure(with: menuItems[indexPath.item])
+            cell.configure(with: menuItems[indexPath.item].text, index: indexPath.row)
+            
             return cell
         } else if collectionView == jobCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "JobCell", for: indexPath) as! JobViewCell
@@ -114,9 +135,10 @@ extension MainVC: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == menuCollectionView {
-            let selectedPage = indexPath.item
-            //TODO: - 상단 탭 "채용", "기업" 눌렀을때 변하게 만들기
+            let selectedCell = collectionView.cellForItem(at: indexPath) as? MenuViewCell
             
+            selectedMenu = Menu(rawValue: indexPath.item) ?? .recruit
+
         } else if collectionView == jobCollectionView {
             let selectedOption = indexPath.item
         }

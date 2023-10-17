@@ -12,17 +12,43 @@ class MenuViewCell: UICollectionViewCell {
     @IBOutlet weak var menuLabel: UILabel!
     @IBOutlet weak var textBackgroundView: UIView!
     
+    override var isHighlighted: Bool {
+        didSet {
+            isHighlighted ? selected() : notSelected()
+        }
+    }
     
-    func configure(with text: String) {
+    override var isSelected: Bool {
+        didSet {
+            isSelected ? selected() : notSelected()
+        }
+    }
+
+    func configure(with text: String, index: Int) {
         menuLabel.text = text
         
+        if index == 0 {
+            selected()
+        } else {
+            notSelected()
+        }
+    }
+    
+    func selected() {
         menuLabel.textColor = .white
         textBackgroundView.backgroundColor = JobplanetColor.Green.color
         textBackgroundView.layer.cornerRadius = textBackgroundView.bounds.height/2
-        
-        menuLabel.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 15.0) ?? UIFont.boldSystemFont(ofSize: 15.0)
-        
-    }
 
+        menuLabel.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 15.0) ?? UIFont.boldSystemFont(ofSize: 15.0)
+    }
     
+    func notSelected() {
+        menuLabel.textColor = JobplanetColor.Gray01.color
+        textBackgroundView.backgroundColor = .white
+        textBackgroundView.layer.cornerRadius = textBackgroundView.bounds.height/2
+        textBackgroundView.layer.borderWidth = 1
+        textBackgroundView.layer.borderColor = JobplanetColor.Gray03.color.cgColor
+
+        menuLabel.font = UIFont(name: "AppleSDGothicNeo", size: 15.0) ?? UIFont.boldSystemFont(ofSize: 15.0)
+    }
 }
