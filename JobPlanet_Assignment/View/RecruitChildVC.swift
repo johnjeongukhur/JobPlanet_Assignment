@@ -23,7 +23,7 @@ class RecruitChildVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.getRecruitList {
+        viewModel.getRecruitItem {
             self.jobCollectionView.reloadData()
         }
 
@@ -47,7 +47,7 @@ extension RecruitChildVC: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
          if collectionView == jobCollectionView {
-            return viewModel.recruitList.value?.recruitItems?.count ?? 0
+            return viewModel.recruitItem.value?.recruitItems?.count ?? 0
         }
         return 0
     }
@@ -56,7 +56,7 @@ extension RecruitChildVC: UICollectionViewDataSource, UICollectionViewDelegate {
          if collectionView == jobCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "JobCell", for: indexPath) as! JobViewCell
             
-            if let item = viewModel.recruitList.value?.recruitItems?[indexPath.row] {
+            if let item = viewModel.recruitItem.value?.recruitItems?[indexPath.row] {
                 cell.configure(item)
             }
             

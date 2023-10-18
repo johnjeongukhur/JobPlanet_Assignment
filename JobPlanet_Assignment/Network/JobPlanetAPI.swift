@@ -57,7 +57,7 @@ extension JobPlanetAPI {
         return get(baseURL.appendingPathComponent(recuitItems))
     }
     
-    static func getCellItems() -> Observable<[CellItemsModel]> {
+    static func getCellItems() -> Observable<CellItemsModel> {
         return get(baseURL.appendingPathComponent(cellItems))
     }
 }

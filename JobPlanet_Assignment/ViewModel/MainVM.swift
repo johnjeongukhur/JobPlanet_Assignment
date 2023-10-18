@@ -14,15 +14,17 @@ class MainVM {
     
     let disposeBag = DisposeBag()
     
-    var recruitList = BehaviorRelay<RecruitListModel?>(value: nil)
+    var recruitItem = BehaviorRelay<RecruitListModel?>(value: nil)
+    
+    var cellItems = BehaviorRelay<CellItemsModel?>(value: nil)
 
-    func getRecruitList(action: @escaping () -> Void) {
+    func getRecruitItem(action: @escaping () -> Void) {
         JobPlanetAPI.getRecuitItems()
             .observe(on: MainScheduler.instance)
             .subscribe { [weak self] event in
                 switch event {
                 case .next(let item):
-                    self?.recruitList.accept(item)
+                    self?.recruitItem.accept(item)
                     action()
                 case .error(let error):
                     print("Error: \(error.localizedDescription)")
@@ -33,5 +35,21 @@ class MainVM {
             .disposed(by: disposeBag)
     }
     
+    func getCellItems(action: @escaping () -> Void) {
+        JobPlanetAPI.getCellItems()
+            .observe(on: MainScheduler.instance)
+            .subscribe { [weak self] event in
+                switch event {
+                case .next(let item):
+                    self?.cellItems.accept(item)
+                    action()
+                case .error(let error):
+                    print("Error: \(error.localizedDescription)")
+                default:
+                    break
+                }
+            }
+            .disposed(by: disposeBag)
+    }
     
 }

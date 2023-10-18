@@ -7,6 +7,22 @@
 
 import UIKit
 
+enum JobPlanetFont {
+    case Bold // 700
+    case SemiBold // 600
+    case Regular // 500
+    case Medium // 400
+    
+    var font: String {
+        switch self {
+        case .Bold: return "AppleSDGothicNeo-Bold"
+        case .SemiBold: return "AppleSDGothicNeo-SemiBold"
+        case .Regular: return "AppleSDGothicNeo-Regular"
+        case .Medium: return "AppleSDGothicNeo-Medium"
+        }
+    }
+}
+
 enum JobplanetColor {
     case Green
     case Blue

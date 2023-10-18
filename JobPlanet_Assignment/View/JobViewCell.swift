@@ -47,7 +47,7 @@ class JobViewCell: UICollectionViewCell {
                 if !(item.isEmpty) {
                     let label = PaddingLabel()
                     label.text = item
-                    label.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 12)
+                    label.font = UIFont(name: JobPlanetFont.Regular.font, size: 12)
                     label.textColor = JobplanetColor.Gray02.color
                     label.layer.borderWidth = 1.0
                     label.layer.borderColor = JobplanetColor.Gray03.color.cgColor
@@ -73,17 +73,17 @@ class JobViewCell: UICollectionViewCell {
         imageViewWidth.constant = cellWidth
 
         
-        titleLabel.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 15)
+        titleLabel.font = UIFont(name: JobPlanetFont.Bold.font, size: 15)
         titleLabel.textColor = JobplanetColor.Gray01.color // 텍스트 색상 설정
 
-        ratingLabel.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 14)
+        ratingLabel.font = UIFont(name: JobPlanetFont.Bold.font, size: 14)
         ratingLabel.textColor = JobplanetColor.Gray01.color
 
         
-        companyNameLabel.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 13) // 폰트 설정
+        companyNameLabel.font = UIFont(name: JobPlanetFont.Regular.font, size: 13) // 폰트 설정
         companyNameLabel.textColor = JobplanetColor.Gray01.color // 텍스트 색상 설정
 
-        rewardLabel.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 13) // 폰트 설정
+        rewardLabel.font = UIFont(name: JobPlanetFont.Regular.font, size: 13) // 폰트 설정
         rewardLabel.textColor = JobplanetColor.Gray01.color // 텍스트 색상 설정
     }
 }

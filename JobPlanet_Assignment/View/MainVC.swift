@@ -59,15 +59,14 @@ class MainVC: UIViewController, RecruitChildDelegate {
         }
     }
     
+    // 스크롤될때 menuCollection 숨기기위한 delegate 처리
     func didReceiveData(data: Double, isScroll: Bool) {
-        print("Received data from RecruitChildVC: \(data)")
         UIView.animate(withDuration: 0.3) {
             self.menuCollectionView.frame.origin.y = data
             if isScroll {
                 self.recruitViewTopInset.constant = -62
             } else {
                 self.recruitViewTopInset.constant = 0
-                
             }
             self.view.layoutIfNeeded()
 
@@ -103,7 +102,7 @@ class MainVC: UIViewController, RecruitChildDelegate {
 
         if let textFieldInsideSearchBar = searchBar.value(forKey: "searchField") as? UITextField {
             textFieldInsideSearchBar.textColor = .black
-            textFieldInsideSearchBar.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 17) ?? UIFont.systemFont(ofSize: 17)
+            textFieldInsideSearchBar.font = UIFont(name: JobPlanetFont.Regular.font, size: 17) ?? UIFont.systemFont(ofSize: 17)
             textFieldInsideSearchBar.backgroundColor = .white
             textFieldInsideSearchBar.attributedPlaceholder = NSAttributedString(
                 string: "기업, 채용공고 검색",

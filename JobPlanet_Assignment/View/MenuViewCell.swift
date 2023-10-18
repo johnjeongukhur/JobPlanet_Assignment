@@ -39,7 +39,7 @@ class MenuViewCell: UICollectionViewCell {
         textBackgroundView.backgroundColor = JobplanetColor.Green.color
         textBackgroundView.layer.cornerRadius = textBackgroundView.bounds.height/2
 
-        menuLabel.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 15.0) ?? UIFont.boldSystemFont(ofSize: 15.0)
+        menuLabel.font = UIFont(name: JobPlanetFont.Bold.font, size: 15.0) ?? UIFont.boldSystemFont(ofSize: 15.0)
     }
     
     func notSelected() {
@@ -49,6 +49,6 @@ class MenuViewCell: UICollectionViewCell {
         textBackgroundView.layer.borderWidth = 1
         textBackgroundView.layer.borderColor = JobplanetColor.Gray03.color.cgColor
 
-        menuLabel.font = UIFont(name: "AppleSDGothicNeo", size: 15.0) ?? UIFont.boldSystemFont(ofSize: 15.0)
+        menuLabel.font = UIFont(name: JobPlanetFont.Medium.font, size: 15.0) ?? UIFont.boldSystemFont(ofSize: 15.0)
     }
 }

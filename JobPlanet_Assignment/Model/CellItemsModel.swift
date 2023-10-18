@@ -21,6 +21,7 @@ struct CellItem: Codable {
     let name, industryName: String?
     let rateTotalAvg: Double?
     let reviewSummary: String?
+    let cons, pros: String?
     let salaryAvg: Int?
     let updateDate, interviewQuestion: String?
     let count: Int?
@@ -34,6 +35,7 @@ struct CellItem: Codable {
         case industryName = "industry_name"
         case rateTotalAvg = "rate_total_avg"
         case reviewSummary = "review_summary"
+        case cons, pros
         case salaryAvg = "salary_avg"
         case updateDate = "update_date"
         case interviewQuestion = "interview_question"

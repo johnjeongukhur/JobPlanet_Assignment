@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		4E410CCA2ADD0E910020A0B9 /* MenuViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E410CC92ADD0E910020A0B9 /* MenuViewCell.swift */; };
 		4E6714A12ADD8DC70094F90D /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6714A02ADD8DC70094F90D /* PaddingLabel.swift */; };
+		4E67CB302ADFA1350025BDBD /* CompanyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E67CB2F2ADFA1350025BDBD /* CompanyTableViewCell.swift */; };
+		4E67CB322AE012930025BDBD /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E67CB312AE012930025BDBD /* StringExtension.swift */; };
+		4E67CB342AE01B430025BDBD /* LineHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E67CB332AE01B430025BDBD /* LineHeight.swift */; };
 		4E94912C2ADF065D00A1870A /* RecruitChildVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E94912B2ADF065D00A1870A /* RecruitChildVC.swift */; };
 		4E94912E2ADF066800A1870A /* CompanyChildVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E94912D2ADF066800A1870A /* CompanyChildVC.swift */; };
 		4EB196C72ADCEA6500AD255C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB196C62ADCEA6500AD255C /* AppDelegate.swift */; };
@@ -31,6 +34,9 @@
 		04A2D90DECB12C1ACDD4100B /* Pods-JobPlanet_Assignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JobPlanet_Assignment.release.xcconfig"; path = "Target Support Files/Pods-JobPlanet_Assignment/Pods-JobPlanet_Assignment.release.xcconfig"; sourceTree = "<group>"; };
 		4E410CC92ADD0E910020A0B9 /* MenuViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewCell.swift; sourceTree = "<group>"; };
 		4E6714A02ADD8DC70094F90D /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		4E67CB2F2ADFA1350025BDBD /* CompanyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyTableViewCell.swift; sourceTree = "<group>"; };
+		4E67CB312AE012930025BDBD /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		4E67CB332AE01B430025BDBD /* LineHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineHeight.swift; sourceTree = "<group>"; };
 		4E94912B2ADF065D00A1870A /* RecruitChildVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruitChildVC.swift; sourceTree = "<group>"; };
 		4E94912D2ADF066800A1870A /* CompanyChildVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyChildVC.swift; sourceTree = "<group>"; };
 		4EB196C32ADCEA6500AD255C /* JobPlanet_Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobPlanet_Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +123,7 @@
 				4E94912B2ADF065D00A1870A /* RecruitChildVC.swift */,
 				4EB2A2DE2ADD2D6B0052DB33 /* JobViewCell.swift */,
 				4E94912D2ADF066800A1870A /* CompanyChildVC.swift */,
+				4E67CB2F2ADFA1350025BDBD /* CompanyTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -144,6 +151,8 @@
 				4EB196DE2ADD001B00AD255C /* Colors.swift */,
 				4EB2A2EB2ADD77210052DB33 /* WonSeparator.swift */,
 				4E6714A02ADD8DC70094F90D /* PaddingLabel.swift */,
+				4E67CB312AE012930025BDBD /* StringExtension.swift */,
+				4E67CB332AE01B430025BDBD /* LineHeight.swift */,
 			);
 			path = "Extensions+Tools";
 			sourceTree = "<group>";
@@ -282,7 +291,9 @@
 				4E6714A12ADD8DC70094F90D /* PaddingLabel.swift in Sources */,
 				4E94912C2ADF065D00A1870A /* RecruitChildVC.swift in Sources */,
 				4EB2A2E82ADD64B90052DB33 /* JobPlanetAPI.swift in Sources */,
+				4E67CB342AE01B430025BDBD /* LineHeight.swift in Sources */,
 				4EB2A2EA2ADD69320052DB33 /* MainVM.swift in Sources */,
+				4E67CB322AE012930025BDBD /* StringExtension.swift in Sources */,
 				4EB196CB2ADCEA6500AD255C /* MainVC.swift in Sources */,
 				4E410CCA2ADD0E910020A0B9 /* MenuViewCell.swift in Sources */,
 				4EB2A2E32ADD628F0052DB33 /* CellItemsModel.swift in Sources */,
@@ -292,6 +303,7 @@
 				4EB2A2EC2ADD77210052DB33 /* WonSeparator.swift in Sources */,
 				4EB196DF2ADD001B00AD255C /* Colors.swift in Sources */,
 				4EB196C72ADCEA6500AD255C /* AppDelegate.swift in Sources */,
+				4E67CB302ADFA1350025BDBD /* CompanyTableViewCell.swift in Sources */,
 				4EB196C92ADCEA6500AD255C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
