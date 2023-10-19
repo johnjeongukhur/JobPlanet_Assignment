@@ -26,10 +26,10 @@ class CellTypeReviewTableViewCell: UITableViewCell {
     
     @IBOutlet weak var reviewSummaryLabel: UILabel! // 리뷰
     @IBOutlet weak var updateDateLabel: UILabel! // 업데이트 날짜
-    @IBOutlet weak var prosLabel: UILabel! // 평균 연봉
-    @IBOutlet weak var prosContentLabel: UILabel! // 평균 연봉 가격
-    @IBOutlet weak var consLabel: UILabel! // 만원
-    @IBOutlet weak var consContentLabel: UILabel! // 만원
+    @IBOutlet weak var prosLabel: UILabel! // 장점
+    @IBOutlet weak var prosContentLabel: UILabel! // 장점 내용
+    @IBOutlet weak var consLabel: UILabel! // 단점
+    @IBOutlet weak var consContentLabel: UILabel! // 단점 내용
     
     static func loadFromNib() -> CellTypeReviewTableViewCell {
         let nib = UINib(nibName: "CellTypeReviewTableViewCell", bundle: nil)

@@ -15,7 +15,6 @@
 		4E1274F92AE1220C0034E983 /* CellTypeReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E1274F72AE1220C0034E983 /* CellTypeReviewTableViewCell.xib */; };
 		4E410CCA2ADD0E910020A0B9 /* MenuViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E410CC92ADD0E910020A0B9 /* MenuViewCell.swift */; };
 		4E6714A12ADD8DC70094F90D /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6714A02ADD8DC70094F90D /* PaddingLabel.swift */; };
-		4E67CB302ADFA1350025BDBD /* CompanyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E67CB2F2ADFA1350025BDBD /* CompanyTableViewCell.swift */; };
 		4E67CB322AE012930025BDBD /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E67CB312AE012930025BDBD /* StringExtension.swift */; };
 		4E67CB342AE01B430025BDBD /* LineHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E67CB332AE01B430025BDBD /* LineHeight.swift */; };
 		4E94912C2ADF065D00A1870A /* RecruitChildVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E94912B2ADF065D00A1870A /* RecruitChildVC.swift */; };
@@ -48,7 +47,6 @@
 		4E1274F72AE1220C0034E983 /* CellTypeReviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellTypeReviewTableViewCell.xib; sourceTree = "<group>"; };
 		4E410CC92ADD0E910020A0B9 /* MenuViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewCell.swift; sourceTree = "<group>"; };
 		4E6714A02ADD8DC70094F90D /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
-		4E67CB2F2ADFA1350025BDBD /* CompanyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyTableViewCell.swift; sourceTree = "<group>"; };
 		4E67CB312AE012930025BDBD /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		4E67CB332AE01B430025BDBD /* LineHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineHeight.swift; sourceTree = "<group>"; };
 		4E94912B2ADF065D00A1870A /* RecruitChildVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruitChildVC.swift; sourceTree = "<group>"; };
@@ -103,7 +101,6 @@
 				4E94912B2ADF065D00A1870A /* RecruitChildVC.swift */,
 				4EB2A2DE2ADD2D6B0052DB33 /* JobViewCell.swift */,
 				4E94912D2ADF066800A1870A /* CompanyChildVC.swift */,
-				4E67CB2F2ADFA1350025BDBD /* CompanyTableViewCell.swift */,
 				4E1274FB2AE12FD00034E983 /* CellType */,
 			);
 			path = Main;
@@ -350,7 +347,6 @@
 				4EB2A2EC2ADD77210052DB33 /* WonSeparator.swift in Sources */,
 				4EB196DF2ADD001B00AD255C /* Colors.swift in Sources */,
 				4EB196C72ADCEA6500AD255C /* AppDelegate.swift in Sources */,
-				4E67CB302ADFA1350025BDBD /* CompanyTableViewCell.swift in Sources */,
 				4EB196C92ADCEA6500AD255C /* SceneDelegate.swift in Sources */,
 				4E1274F02AE0E2AE0034E983 /* CellTypeRecruitCollectionTableViewCell.swift in Sources */,
 			);

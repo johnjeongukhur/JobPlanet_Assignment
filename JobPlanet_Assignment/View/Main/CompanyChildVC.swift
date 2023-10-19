@@ -60,7 +60,6 @@ extension CompanyChildVC: UITableViewDelegate, UITableViewDataSource {
             }
             else if data.cellType == "CELL_TYPE_REVIEW" {
                 let customCell = CellTypeReviewTableViewCell.loadFromNib()
-                
                 customCell.configure(data)
                 return customCell
             }
