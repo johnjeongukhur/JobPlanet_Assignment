@@ -1,15 +1,14 @@
 //
-//  CompanyTableViewCell.swift
+//  CellTypeCompanyTableViewCell.swift
 //  JobPlanet_Assignment
 //
-//  Created by John Hur on 2023/10/18.
+//  Created by John Hur on 2023/10/19.
 //
 
 import UIKit
-import Kingfisher
 
-class CompanyTableViewCell: UITableViewCell {
-    
+class CellTypeCompanyTableViewCell: UITableViewCell {
+
     @IBOutlet weak var tableSeparator: UIView!
     
     @IBOutlet weak var logoImageView: UIImageView!
@@ -27,8 +26,22 @@ class CompanyTableViewCell: UITableViewCell {
     @IBOutlet weak var interviewQuestionLabel: UILabel! // "면접질문"
     @IBOutlet weak var interviewQuestionContentLabel: UILabel! // 후기
     
-    @IBOutlet weak var sectionTitle: UILabel!
+    static func loadFromNib() -> CellTypeCompanyTableViewCell {
+        let nib = UINib(nibName: "CellTypeCompanyTableViewCell", bundle: nil)
+        let cell = nib.instantiate(withOwner: self, options: nil).first as! CellTypeCompanyTableViewCell
+        return cell
+    }
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
     
     func configure(_ data: CellItem) {
         if let imageURL = data.logoPath, let url = URL(string: imageURL) {
@@ -43,11 +56,8 @@ class CompanyTableViewCell: UITableViewCell {
         salaryAvgPriceLabel.text = "\(data.salaryAvg?.wonSeparator() ?? "0")"
         interviewQuestionContentLabel.text = data.interviewQuestion ?? ""
         
-        sectionTitle.text = data.sectionTitle ?? ""
-        
         setupCompanyIntro()
         setupCompanyReview()
-        setupSectionView()
     }
     
     // 로고, 회사이름 etc
@@ -96,10 +106,6 @@ class CompanyTableViewCell: UITableViewCell {
         interviewQuestionContentLabel.font = UIFont(name: JobPlanetFont.Medium.font, size: 17)
         interviewQuestionContentLabel.textColor = JobplanetColor.Gray01.color
     }
-    
-    func setupSectionView() {
-        sectionTitle.font = UIFont(name: JobPlanetFont.Bold.font, size: 20)
-        sectionTitle.textColor = JobplanetColor.Gray01.color
-    }
+
     
 }

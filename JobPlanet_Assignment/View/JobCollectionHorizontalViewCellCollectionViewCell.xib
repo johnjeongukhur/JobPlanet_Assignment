@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="OkF-R9-gYc" customClass="JobCollectionHorizontalViewCellCollectionViewCell" customModule="JobPlanet_Assignment" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="160" height="226"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="aQq-eV-9XT">
+                <rect key="frame" x="0.0" y="0.0" width="160" height="226"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ASc-sk-HNa">
+                        <rect key="frame" x="0.0" y="0.0" width="160" height="98"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="ASc-sk-HNa" secondAttribute="height" multiplier="160:98" id="1pC-mg-lIL"/>
+                            <constraint firstAttribute="width" constant="160" id="f1l-Uk-f82"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[잡플래닛] 프로덕트 디자이너(시니어)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0U-w6-llf">
+                        <rect key="frame" x="0.0" y="106" width="160" height="40.666666666666657"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="VQ4-oC-gZT">
+                        <rect key="frame" x="0.0" y="148.66666666666666" width="132.33333333333334" height="20.333333333333343"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_star" translatesAutoresizingMaskIntoConstraints="NO" id="7lF-SE-qmd">
+                                <rect key="frame" x="0.0" y="0.0" width="12" height="20.333333333333332"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQJ-fl-UhX">
+                                <rect key="frame" x="16" y="0.0" width="24" height="20.333333333333332"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="브레인커머스" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6J-8K-B15">
+                                <rect key="frame" x="43.999999999999993" y="0.0" width="88.333333333333314" height="20.333333333333332"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="lb8-wc-fJN">
+                        <rect key="frame" x="0.0" y="173" width="0.0" height="0.0"/>
+                        <subviews>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lkkln" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pK9-Xg-hdf">
+                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="20.333333333333332"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="축하금: 2,000,000원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MhQ-3U-Bhu">
+                        <rect key="frame" x="0.0" y="177" width="146.33333333333334" height="20.333333333333343"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="c0U-w6-llf" firstAttribute="trailing" secondItem="ASc-sk-HNa" secondAttribute="trailing" id="2GK-Fc-MDu"/>
+                    <constraint firstItem="VQ4-oC-gZT" firstAttribute="top" secondItem="c0U-w6-llf" secondAttribute="bottom" constant="2" id="4f9-dx-ugW"/>
+                    <constraint firstAttribute="trailing" secondItem="ASc-sk-HNa" secondAttribute="trailing" id="9Ph-Cd-peX"/>
+                    <constraint firstItem="c0U-w6-llf" firstAttribute="leading" secondItem="ASc-sk-HNa" secondAttribute="leading" id="ERL-wM-Mag"/>
+                    <constraint firstItem="lb8-wc-fJN" firstAttribute="top" secondItem="VQ4-oC-gZT" secondAttribute="bottom" constant="4" id="KNt-BW-6kR"/>
+                    <constraint firstItem="MhQ-3U-Bhu" firstAttribute="leading" secondItem="ASc-sk-HNa" secondAttribute="leading" id="NCC-yP-NLW"/>
+                    <constraint firstItem="c0U-w6-llf" firstAttribute="top" secondItem="ASc-sk-HNa" secondAttribute="bottom" constant="8" id="NVv-jA-ISv"/>
+                    <constraint firstItem="ASc-sk-HNa" firstAttribute="leading" secondItem="aQq-eV-9XT" secondAttribute="leading" id="Pd7-wQ-zAL"/>
+                    <constraint firstItem="ASc-sk-HNa" firstAttribute="top" secondItem="aQq-eV-9XT" secondAttribute="top" id="hFV-fO-LbZ"/>
+                    <constraint firstItem="VQ4-oC-gZT" firstAttribute="leading" secondItem="ASc-sk-HNa" secondAttribute="leading" id="kOS-Qj-uH8"/>
+                    <constraint firstItem="lb8-wc-fJN" firstAttribute="leading" secondItem="ASc-sk-HNa" secondAttribute="leading" id="s4w-ye-Q7G"/>
+                    <constraint firstItem="MhQ-3U-Bhu" firstAttribute="top" secondItem="lb8-wc-fJN" secondAttribute="bottom" constant="4" id="tQh-11-Yuw"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="160" height="226"/>
+            <connections>
+                <outlet property="appealStackView" destination="lb8-wc-fJN" id="vq3-h1-BS8"/>
+                <outlet property="companyNameLabel" destination="b6J-8K-B15" id="pTF-4m-aIv"/>
+                <outlet property="companyStackView" destination="VQ4-oC-gZT" id="7ap-gV-7VP"/>
+                <outlet property="imageView" destination="ASc-sk-HNa" id="uRG-aR-hhB"/>
+                <outlet property="imageViewWidth" destination="f1l-Uk-f82" id="mgX-JJ-Cti"/>
+                <outlet property="ratingImageView" destination="7lF-SE-qmd" id="gTN-s8-KJe"/>
+                <outlet property="ratingLabel" destination="aQJ-fl-UhX" id="zIk-Qw-5Nx"/>
+                <outlet property="rewardLabel" destination="MhQ-3U-Bhu" id="a7a-b1-wFo"/>
+                <outlet property="titleLabel" destination="c0U-w6-llf" id="L7J-95-gTh"/>
+            </connections>
+            <point key="canvasLocation" x="302" y="20"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="icon_star" width="12" height="12"/>
+    </resources>
+</document>

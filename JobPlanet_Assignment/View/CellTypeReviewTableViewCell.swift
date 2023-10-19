@@ -1,15 +1,14 @@
 //
-//  CompanyTableViewCell.swift
+//  CellTypeReviewTableViewCell.swift
 //  JobPlanet_Assignment
 //
-//  Created by John Hur on 2023/10/18.
+//  Created by John Hur on 2023/10/19.
 //
 
 import UIKit
-import Kingfisher
 
-class CompanyTableViewCell: UITableViewCell {
-    
+class CellTypeReviewTableViewCell: UITableViewCell {
+
     @IBOutlet weak var tableSeparator: UIView!
     
     @IBOutlet weak var logoImageView: UIImageView!
@@ -20,15 +19,24 @@ class CompanyTableViewCell: UITableViewCell {
     
     @IBOutlet weak var reviewSummaryLabel: UILabel! // 리뷰
     @IBOutlet weak var updateDateLabel: UILabel! // 업데이트 날짜
-    @IBOutlet weak var salaryAvgLabel: UILabel! // 평균 연봉
-    @IBOutlet weak var salaryAvgPriceLabel: UILabel! // 평균 연봉 가격
-    @IBOutlet weak var salaryAvgWonLabel: UILabel! // 만원
+    @IBOutlet weak var prosLabel: UILabel! // 평균 연봉
+    @IBOutlet weak var prosContentLabel: UILabel! // 평균 연봉 가격
+    @IBOutlet weak var consLabel: UILabel! // 만원
+    @IBOutlet weak var consContentLabel: UILabel! // 만원
     
-    @IBOutlet weak var interviewQuestionLabel: UILabel! // "면접질문"
-    @IBOutlet weak var interviewQuestionContentLabel: UILabel! // 후기
-    
-    @IBOutlet weak var sectionTitle: UILabel!
-    
+    static func loadFromNib() -> CellTypeReviewTableViewCell {
+        let nib = UINib(nibName: "CellTypeReviewTableViewCell", bundle: nil)
+        let cell = nib.instantiate(withOwner: self, options: nil).first as! CellTypeReviewTableViewCell
+        return cell
+    }
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
     
     func configure(_ data: CellItem) {
         if let imageURL = data.logoPath, let url = URL(string: imageURL) {
@@ -40,14 +48,13 @@ class CompanyTableViewCell: UITableViewCell {
         
         reviewSummaryLabel.text = data.reviewSummary ?? ""
         updateDateLabel.text = data.updateDate?.formatDate() ?? ""
-        salaryAvgPriceLabel.text = "\(data.salaryAvg?.wonSeparator() ?? "0")"
-        interviewQuestionContentLabel.text = data.interviewQuestion ?? ""
         
-        sectionTitle.text = data.sectionTitle ?? ""
+        prosContentLabel.text = data.pros ?? ""
+        consContentLabel.text = data.cons ?? ""
+    
         
         setupCompanyIntro()
         setupCompanyReview()
-        setupSectionView()
     }
     
     // 로고, 회사이름 etc
@@ -73,7 +80,8 @@ class CompanyTableViewCell: UITableViewCell {
     // 회사 리뷰, ex) "경력 대비 연봉..
     func setupCompanyReview() {
         reviewSummaryLabel.setLineSpacing(spacing: 4)
-        interviewQuestionContentLabel.setLineSpacing(spacing: 4)
+        prosContentLabel.setLineSpacing(spacing: 4)
+        consContentLabel.setLineSpacing(spacing: 4)
         
         reviewSummaryLabel.font = UIFont(name: JobPlanetFont.SemiBold.font, size: 18)
         reviewSummaryLabel.textColor = JobplanetColor.Gray01.color
@@ -81,25 +89,31 @@ class CompanyTableViewCell: UITableViewCell {
         updateDateLabel.font = UIFont(name: JobPlanetFont.Regular.font, size: 13)
         updateDateLabel.textColor = JobplanetColor.Gray01.color
 
-        salaryAvgLabel.font = UIFont(name: JobPlanetFont.Medium.font, size: 17)
-        salaryAvgLabel.textColor = JobplanetColor.Green.color
+//        salaryAvgLabel.font = UIFont(name: JobPlanetFont.Medium.font, size: 17)
+//        salaryAvgLabel.textColor = JobplanetColor.Green.color
+//
+//        salaryAvgPriceLabel.font = UIFont(name: JobPlanetFont.Bold.font, size: 24)
+//        salaryAvgPriceLabel.textColor = JobplanetColor.Gray01.color
+//
+//        salaryAvgWonLabel.font = UIFont(name: JobPlanetFont.Medium.font, size: 17)
+//        salaryAvgWonLabel.textColor = JobplanetColor.Gray01.color
 
-        salaryAvgPriceLabel.font = UIFont(name: JobPlanetFont.Bold.font, size: 24)
-        salaryAvgPriceLabel.textColor = JobplanetColor.Gray01.color
+        prosLabel.font = UIFont(name: JobPlanetFont.Bold.font, size: 17)
+        prosLabel.textColor = JobplanetColor.Blue.color
 
-        salaryAvgWonLabel.font = UIFont(name: JobPlanetFont.Medium.font, size: 17)
-        salaryAvgWonLabel.textColor = JobplanetColor.Gray01.color
+        prosContentLabel.font = UIFont(name: JobPlanetFont.Medium.font, size: 17)
+        prosContentLabel.textColor = JobplanetColor.Gray01.color
+        
+        
+        consLabel.font = UIFont(name: JobPlanetFont.Bold.font, size: 17)
+        consLabel.textColor = JobplanetColor.Red.color
 
-        interviewQuestionLabel.font = UIFont(name: JobPlanetFont.Bold.font, size: 17)
-        interviewQuestionLabel.textColor = JobplanetColor.Gray01.color
+        consContentLabel.font = UIFont(name: JobPlanetFont.Medium.font, size: 17)
+        consContentLabel.textColor = JobplanetColor.Gray01.color
 
-        interviewQuestionContentLabel.font = UIFont(name: JobPlanetFont.Medium.font, size: 17)
-        interviewQuestionContentLabel.textColor = JobplanetColor.Gray01.color
     }
     
-    func setupSectionView() {
-        sectionTitle.font = UIFont(name: JobPlanetFont.Bold.font, size: 20)
-        sectionTitle.textColor = JobplanetColor.Gray01.color
-    }
+
+    
     
 }
