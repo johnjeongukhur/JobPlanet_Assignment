@@ -52,7 +52,7 @@ extension CompanyChildVC: UITableViewDelegate, UITableViewDataSource {
                 let customCell = CellTypeRecruitCollectionTableViewCell.loadFromNib()
                 
                 if let list = item[indexPath.item].recommendRecruit {
-                    customCell.sectionTitleLabel.text = item[indexPath.item].sectionTitle ?? ""
+                    customCell.configure(item[indexPath.item].sectionTitle ?? "")
                     customCell.dataList = list
                     customCell.collectionView.reloadData()
                 }

@@ -41,6 +41,13 @@ class CellTypeRecruitCollectionTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    func configure(_ text: String) {
+        sectionTitleLabel.text = text
+        
+        sectionTitleLabel.textColor = JobplanetColor.Gray01.color
+        sectionTitleLabel.font = UIFont(name: JobPlanetFont.Bold.font, size: 20)
+    }
+    
 }
 
 extension CellTypeRecruitCollectionTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -59,7 +66,6 @@ extension CellTypeRecruitCollectionTableViewCell: UICollectionViewDataSource, UI
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let selectedItem = yourDataSourceArray[indexPath.item]
         print("\(indexPath.item)")
     }
 }
