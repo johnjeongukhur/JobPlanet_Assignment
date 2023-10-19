@@ -98,11 +98,9 @@
 			children = (
 				4EB196CC2ADCEA6500AD255C /* Main.storyboard */,
 				4EB196CA2ADCEA6500AD255C /* MainVC.swift */,
-				4E410CC92ADD0E910020A0B9 /* MenuViewCell.swift */,
-				4E94912B2ADF065D00A1870A /* RecruitChildVC.swift */,
-				4EB2A2DE2ADD2D6B0052DB33 /* JobViewCell.swift */,
-				4E94912D2ADF066800A1870A /* CompanyChildVC.swift */,
-				4E1274FB2AE12FD00034E983 /* CellType */,
+				4E391F912AE146E20023B9D0 /* MenuVC */,
+				4E391F902AE146D70023B9D0 /* RecruitVC */,
+				4E391F8F2AE146C30023B9D0 /* CompanyVC */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -120,6 +118,32 @@
 				4E1274F72AE1220C0034E983 /* CellTypeReviewTableViewCell.xib */,
 			);
 			path = CellType;
+			sourceTree = "<group>";
+		};
+		4E391F8F2AE146C30023B9D0 /* CompanyVC */ = {
+			isa = PBXGroup;
+			children = (
+				4E94912D2ADF066800A1870A /* CompanyChildVC.swift */,
+				4E1274FB2AE12FD00034E983 /* CellType */,
+			);
+			path = CompanyVC;
+			sourceTree = "<group>";
+		};
+		4E391F902AE146D70023B9D0 /* RecruitVC */ = {
+			isa = PBXGroup;
+			children = (
+				4E94912B2ADF065D00A1870A /* RecruitChildVC.swift */,
+				4EB2A2DE2ADD2D6B0052DB33 /* JobViewCell.swift */,
+			);
+			path = RecruitVC;
+			sourceTree = "<group>";
+		};
+		4E391F912AE146E20023B9D0 /* MenuVC */ = {
+			isa = PBXGroup;
+			children = (
+				4E410CC92ADD0E910020A0B9 /* MenuViewCell.swift */,
+			);
+			path = MenuVC;
 			sourceTree = "<group>";
 		};
 		4EB196BA2ADCEA6500AD255C = {

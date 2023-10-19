@@ -5,6 +5,11 @@
 //  Created by John Hur on 2023/10/18.
 //
 
+/*
+ MainVC의 자식뷰
+
+ */
+
 import UIKit
 
 class CompanyChildVC: UIViewController {

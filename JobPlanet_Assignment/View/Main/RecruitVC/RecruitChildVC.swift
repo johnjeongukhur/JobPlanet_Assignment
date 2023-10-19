@@ -6,6 +6,8 @@
 //
 
 /*
+ MainVC의 자식뷰
+ JobViewCell의 부모뷰
  
  */
 
@@ -21,7 +23,7 @@ class RecruitChildVC: UIViewController {
     
     weak var delegate: RecruitChildDelegate?
     
-    var height = 0.0
+    var topMinY = 0.0
     
     @IBOutlet weak var jobCollectionView: UICollectionView!
     
@@ -30,7 +32,6 @@ class RecruitChildVC: UIViewController {
         viewModel.getRecruitItem {
             self.jobCollectionView.reloadData()
         }
-
         setupUI()
     }
     
@@ -111,7 +112,7 @@ extension RecruitChildVC: UIScrollViewDelegate {
                 self.delegate?.didReceiveData(data: 0, isScroll: true)
             } else {
                 // 상단에 도착했을 때
-                self.delegate?.didReceiveData(data: height, isScroll: false)
+                self.delegate?.didReceiveData(data: topMinY, isScroll: false)
             }
         }
     }

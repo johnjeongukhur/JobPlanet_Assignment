@@ -55,7 +55,7 @@ class MainVC: UIViewController, RecruitChildDelegate {
         if segue.identifier == "toRecruitChild" {
             DispatchQueue.main.async {
                 let recruitVC = segue.destination as! RecruitChildVC
-                recruitVC.height = self.searchSuperView.frame.height
+                recruitVC.topMinY = self.searchSuperView.frame.height
                 recruitVC.delegate = self
             }
         } else if segue.identifier == "toCompanyChild" {
