@@ -27,7 +27,7 @@
 		4EB196CE2ADCEA6500AD255C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB196CC2ADCEA6500AD255C /* Main.storyboard */; };
 		4EB196D02ADCEA6500AD255C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EB196CF2ADCEA6500AD255C /* Assets.xcassets */; };
 		4EB196D32ADCEA6500AD255C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB196D12ADCEA6500AD255C /* LaunchScreen.storyboard */; };
-		4EB196DF2ADD001B00AD255C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB196DE2ADD001B00AD255C /* Colors.swift */; };
+		4EB196DF2ADD001B00AD255C /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB196DE2ADD001B00AD255C /* DesignSystem.swift */; };
 		4EB2A2DF2ADD2D6B0052DB33 /* JobViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB2A2DE2ADD2D6B0052DB33 /* JobViewCell.swift */; };
 		4EB2A2E12ADD5EB50052DB33 /* RecruitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB2A2E02ADD5EB50052DB33 /* RecruitModel.swift */; };
 		4EB2A2E32ADD628F0052DB33 /* CellItemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB2A2E22ADD628F0052DB33 /* CellItemsModel.swift */; };
@@ -61,7 +61,7 @@
 		4EB196CF2ADCEA6500AD255C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4EB196D22ADCEA6500AD255C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4EB196D42ADCEA6500AD255C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4EB196DE2ADD001B00AD255C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		4EB196DE2ADD001B00AD255C /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
 		4EB2A2DE2ADD2D6B0052DB33 /* JobViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewCell.swift; sourceTree = "<group>"; };
 		4EB2A2E02ADD5EB50052DB33 /* RecruitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruitModel.swift; sourceTree = "<group>"; };
 		4EB2A2E22ADD628F0052DB33 /* CellItemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellItemsModel.swift; sourceTree = "<group>"; };
@@ -96,6 +96,7 @@
 		4E1274FA2AE122180034E983 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				4EB196CC2ADCEA6500AD255C /* Main.storyboard */,
 				4EB196CA2ADCEA6500AD255C /* MainVC.swift */,
 				4E410CC92ADD0E910020A0B9 /* MenuViewCell.swift */,
 				4E94912B2ADF065D00A1870A /* RecruitChildVC.swift */,
@@ -149,7 +150,6 @@
 				4EB196DC2ADCED9000AD255C /* Model */,
 				4EB196DB2ADCED8B00AD255C /* ViewModel */,
 				4EB196DA2ADCED8700AD255C /* View */,
-				4EB196CC2ADCEA6500AD255C /* Main.storyboard */,
 				4EB196CF2ADCEA6500AD255C /* Assets.xcassets */,
 				4EB196D12ADCEA6500AD255C /* LaunchScreen.storyboard */,
 				4EB196D42ADCEA6500AD255C /* Info.plist */,
@@ -185,7 +185,7 @@
 		4EB196DD2ADD000700AD255C /* Extensions+Tools */ = {
 			isa = PBXGroup;
 			children = (
-				4EB196DE2ADD001B00AD255C /* Colors.swift */,
+				4EB196DE2ADD001B00AD255C /* DesignSystem.swift */,
 				4EB2A2EB2ADD77210052DB33 /* WonSeparator.swift */,
 				4E6714A02ADD8DC70094F90D /* PaddingLabel.swift */,
 				4E67CB312AE012930025BDBD /* StringExtension.swift */,
@@ -345,7 +345,7 @@
 				4EB2A2DF2ADD2D6B0052DB33 /* JobViewCell.swift in Sources */,
 				4EB2A2E12ADD5EB50052DB33 /* RecruitModel.swift in Sources */,
 				4EB2A2EC2ADD77210052DB33 /* WonSeparator.swift in Sources */,
-				4EB196DF2ADD001B00AD255C /* Colors.swift in Sources */,
+				4EB196DF2ADD001B00AD255C /* DesignSystem.swift in Sources */,
 				4EB196C72ADCEA6500AD255C /* AppDelegate.swift in Sources */,
 				4EB196C92ADCEA6500AD255C /* SceneDelegate.swift in Sources */,
 				4E1274F02AE0E2AE0034E983 /* CellTypeRecruitCollectionTableViewCell.swift in Sources */,

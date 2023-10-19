@@ -5,6 +5,10 @@
 //  Created by John Hur on 2023/10/16.
 //
 
+/*
+ 
+ */
+
 import Foundation
 import UIKit
 import Kingfisher
@@ -20,8 +24,6 @@ class JobViewCell: UICollectionViewCell {
     
     @IBOutlet weak var companyStackView: UIStackView!
     @IBOutlet weak var appealStackView: UIStackView!
-    
-    @IBOutlet weak var secondStackScrollView: UIScrollView!
     
     @IBOutlet weak var rewardLabel: UILabel!
     

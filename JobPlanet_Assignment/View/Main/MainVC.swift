@@ -5,6 +5,11 @@
 //  Created by John Hur on 2023/10/16.
 //
 
+/*
+ Storyboard - Main
+
+ */
+
 import UIKit
 
 let menuCollectionViewHeight = 62.0

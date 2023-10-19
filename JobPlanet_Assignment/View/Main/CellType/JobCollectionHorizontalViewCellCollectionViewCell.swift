@@ -5,6 +5,11 @@
 //  Created by John Hur on 2023/10/19.
 //
 
+/*
+하단의 Cell에서 collectionViewCell이 쓰임
+ CellTypeRecruitCollectionTableViewCell
+ */
+
 import UIKit
 
 class JobCollectionHorizontalViewCellCollectionViewCell: UICollectionViewCell {

@@ -5,6 +5,11 @@
 //  Created by John Hur on 2023/10/16.
 //
 
+/*
+ "채용", "기업" collectionCell
+ 
+ */
+
 import Foundation
 import UIKit
 
