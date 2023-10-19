@@ -5,6 +5,13 @@
 //  Created by John Hur on 2023/10/19.
 //
 
+/*
+ 상위 뷰 - CompanyChildVC
+ 
+ CELL_TYPE == "REVIEW"
+ 리뷰 Cell
+ */
+
 import UIKit
 
 class CellTypeReviewTableViewCell: UITableViewCell {

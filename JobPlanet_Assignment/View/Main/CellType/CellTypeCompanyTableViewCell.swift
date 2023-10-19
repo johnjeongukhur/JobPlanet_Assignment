@@ -5,6 +5,12 @@
 //  Created by John Hur on 2023/10/19.
 //
 
+/*
+ 상위 뷰 - CompanyChildVC
+ 
+ CELL_TYPE == "COMPANY"
+ */
+
 import UIKit
 
 class CellTypeCompanyTableViewCell: UITableViewCell {

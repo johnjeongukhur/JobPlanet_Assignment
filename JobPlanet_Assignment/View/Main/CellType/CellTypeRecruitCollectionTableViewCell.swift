@@ -5,6 +5,16 @@
 //  Created by John Hur on 2023/10/19.
 //
 
+/*
+ 상위 뷰 - CompanyChildVC
+ 
+ CELL_TYPE == "RECRUIT"
+ 인기 채용 공고 - CollectionView, Horizontal Scroll 형태
+ 
+ 아래의 Cell을 등록 시켜줌
+ JobCollectionHorizontalViewCellCollectionViewCell
+ */
+
 import UIKit
 
 class CellTypeRecruitCollectionTableViewCell: UITableViewCell {
@@ -24,13 +34,11 @@ class CellTypeRecruitCollectionTableViewCell: UITableViewCell {
         super.awakeFromNib()
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(UINib(nibName: "JobCollectionHorizontalViewCellCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "cell")
+        collectionView.register(UINib(nibName: "JobCollectionHorizontalViewCellCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "jobCell")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }
@@ -41,7 +49,7 @@ extension CellTypeRecruitCollectionTableViewCell: UICollectionViewDataSource, UI
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! JobCollectionHorizontalViewCellCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "jobCell", for: indexPath) as! JobCollectionHorizontalViewCellCollectionViewCell
         
         if let item = dataList?[indexPath.item] {
             cell.configure(item)

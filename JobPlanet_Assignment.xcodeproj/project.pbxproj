@@ -95,11 +95,33 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		4E1274FA2AE122180034E983 /* New Group */ = {
+		4E1274FA2AE122180034E983 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				4EB196CA2ADCEA6500AD255C /* MainVC.swift */,
+				4E410CC92ADD0E910020A0B9 /* MenuViewCell.swift */,
+				4E94912B2ADF065D00A1870A /* RecruitChildVC.swift */,
+				4EB2A2DE2ADD2D6B0052DB33 /* JobViewCell.swift */,
+				4E94912D2ADF066800A1870A /* CompanyChildVC.swift */,
+				4E67CB2F2ADFA1350025BDBD /* CompanyTableViewCell.swift */,
+				4E1274FB2AE12FD00034E983 /* CellType */,
 			);
-			path = "New Group";
+			path = Main;
+			sourceTree = "<group>";
+		};
+		4E1274FB2AE12FD00034E983 /* CellType */ = {
+			isa = PBXGroup;
+			children = (
+				4EA71FF72AE034C400BF751B /* CellTypeCompanyTableViewCell.swift */,
+				4EA71FF82AE034C400BF751B /* CellTypeCompanyTableViewCell.xib */,
+				4E1274EE2AE0E2AE0034E983 /* CellTypeRecruitCollectionTableViewCell.swift */,
+				4E1274EF2AE0E2AE0034E983 /* CellTypeRecruitCollectionTableViewCell.xib */,
+				4E1274F22AE0E70A0034E983 /* JobCollectionHorizontalViewCellCollectionViewCell.swift */,
+				4E1274F32AE0E70A0034E983 /* JobCollectionHorizontalViewCellCollectionViewCell.xib */,
+				4E1274F62AE1220C0034E983 /* CellTypeReviewTableViewCell.swift */,
+				4E1274F72AE1220C0034E983 /* CellTypeReviewTableViewCell.xib */,
+			);
+			path = CellType;
 			sourceTree = "<group>";
 		};
 		4EB196BA2ADCEA6500AD255C = {
@@ -141,21 +163,7 @@
 		4EB196DA2ADCED8700AD255C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4E1274FA2AE122180034E983 /* New Group */,
-				4EB196CA2ADCEA6500AD255C /* MainVC.swift */,
-				4E410CC92ADD0E910020A0B9 /* MenuViewCell.swift */,
-				4E94912B2ADF065D00A1870A /* RecruitChildVC.swift */,
-				4EB2A2DE2ADD2D6B0052DB33 /* JobViewCell.swift */,
-				4E94912D2ADF066800A1870A /* CompanyChildVC.swift */,
-				4E67CB2F2ADFA1350025BDBD /* CompanyTableViewCell.swift */,
-				4EA71FF72AE034C400BF751B /* CellTypeCompanyTableViewCell.swift */,
-				4EA71FF82AE034C400BF751B /* CellTypeCompanyTableViewCell.xib */,
-				4E1274EE2AE0E2AE0034E983 /* CellTypeRecruitCollectionTableViewCell.swift */,
-				4E1274EF2AE0E2AE0034E983 /* CellTypeRecruitCollectionTableViewCell.xib */,
-				4E1274F22AE0E70A0034E983 /* JobCollectionHorizontalViewCellCollectionViewCell.swift */,
-				4E1274F32AE0E70A0034E983 /* JobCollectionHorizontalViewCellCollectionViewCell.xib */,
-				4E1274F62AE1220C0034E983 /* CellTypeReviewTableViewCell.swift */,
-				4E1274F72AE1220C0034E983 /* CellTypeReviewTableViewCell.xib */,
+				4E1274FA2AE122180034E983 /* Main */,
 			);
 			path = View;
 			sourceTree = "<group>";

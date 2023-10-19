@@ -64,47 +64,8 @@ extension CompanyChildVC: UITableViewDelegate, UITableViewDataSource {
                 customCell.configure(data)
                 return customCell
             }
-            
-            
         }
         return UITableViewCell()
-
-        
     }
-    
-    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 300 // 셀의 높이를 50 포인트로 지정
-//    }
-
-    
 }
 
-//extension CompanyChildVC: UICollectionViewDataSource, UICollectionViewDelegate {
-//
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//         if collectionView == cellTypeCollectionView {
-//            return viewModel.recruitItem.value?.recruitItems?.count ?? 0
-//        }
-//        return 0
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//         if collectionView == cellTypeCollectionView {
-//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "JobCell", for: indexPath) as! JobViewCell
-//
-//            if let item = viewModel.recruitItem.value?.recruitItems?[indexPath.row] {
-//                cell.configure(item)
-//            }
-//
-//            return cell
-//        }
-//        return UICollectionViewCell()
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        if collectionView == cellTypeCollectionView {
-//            let selectedOption = indexPath.item
-//        }
-//    }
-//}
