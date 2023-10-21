@@ -94,7 +94,7 @@ class CellTypeReviewTableViewCell: UITableViewCell {
         reviewSummaryLabel.textColor = JobplanetColor.Gray01.color
 
         updateDateLabel.font = UIFont(name: JobPlanetFont.Regular.font, size: 13)
-        updateDateLabel.textColor = JobplanetColor.Gray01.color
+        updateDateLabel.textColor = JobplanetColor.Gray03.color
 
 //        salaryAvgLabel.font = UIFont(name: JobPlanetFont.Medium.font, size: 17)
 //        salaryAvgLabel.textColor = JobplanetColor.Green.color
