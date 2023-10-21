@@ -7,6 +7,7 @@
 
 import UIKit
 
+// 행간 조정
 extension UILabel {
     func setLineSpacing(spacing: CGFloat) {
         guard let text = text else { return }
